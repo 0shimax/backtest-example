@@ -1,0 +1,65 @@
+# Here you can define all your data sets by using simple YAML syntax.
+#
+# Documentation for this file format can be found in "The Data Catalog"
+# Link: https://kedro.readthedocs.io/en/stable/05_data/01_data_catalog.html
+series:
+  type: "${datasets.pickle}"
+  filepath: data/01_raw/series.pickle
+  versioned: true
+  layer: raw
+
+features:
+  type: "${datasets.pickle}"
+  filepath: data/04_feature/all.pickle
+  versioned: true
+  layer: feature
+
+model_input:
+  type: "${datasets.pickle}"
+  filepath: data/05_model_input/model_input.pickle
+  versioned: true
+  layer: model_input
+
+include_y_hat:
+  type: "${datasets.pickle}"
+  filepath: data/07_model_output/h_hat.pickle
+  versioned: true
+  layer: model_output
+
+reporting_input:
+  type: "${datasets.pickle}"
+  filepath: data/08_reporting/reporting_input.pickle
+  versioned: true
+  layer: reporting
+
+execution_prob:
+  type: "${datasets.image}"
+  filepath: data/08_reporting/execution_prob.png
+
+average_time_to_exit:
+  type: "${datasets.image}"
+  filepath: data/08_reporting/average_time_to_exit.png
+
+time_distribution_to_exit:
+  type: "${datasets.image}"
+  filepath: data/08_reporting/time_distribution_to_exit.png
+
+cumsum_reaturn:
+  type: "${datasets.image}"
+  filepath: data/08_reporting/cumsum_reaturn.png
+
+cumsum_return_with_y_hat:
+  type: "${datasets.image}"
+  filepath: data/08_reporting/cumsum_return_with_y_hat.png
+
+possition:
+  type: "${datasets.image}"
+  filepath: data/08_reporting/possition.png
+
+average_possition:
+  type: "${datasets.image}"
+  filepath: data/08_reporting/average_possition.png
+
+transaction_volume:
+  type: "${datasets.image}"
+  filepath: data/08_reporting/transaction_volume.png

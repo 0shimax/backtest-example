@@ -1,0 +1,12 @@
+version: "3.3"
+services:
+  backtest-example:
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    command: sleep infinity
+    ports:
+      - 8889:8888
+    volumes:
+      - ~/dev/backtest-example:/backtest-example
+      - ~/data:/data

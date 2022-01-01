@@ -1,0 +1,61 @@
+data_params:
+  test_size: 0.2
+  random_state: 555
+  pips: 1
+  ticker: "BTC-PERP"
+  horizon: 1 # エントリーしてからエグジットを始めるまでの待ち時間 (1以上である必要がある)
+  fee: 0.0 # maker手数料
+  features:
+    - ADX
+    - ADXR
+    - APO
+    - AROON_aroondown
+    - AROON_aroonup
+    - AROONOSC
+    - CCI
+    - DX
+    - MACD_macd
+    - MACD_macdsignal
+    - MACD_macdhist
+    - MFI
+    - MOM
+    - RSI
+    - STOCH_slowk
+    - STOCH_slowd
+    - STOCHF_fastk
+    - ULTOSC
+    - WILLR
+    - HT_DCPERIOD
+    - HT_DCPHASE
+    - HT_PHASOR_inphase
+    - HT_PHASOR_quadrature
+    - HT_TRENDMODE
+    - BETA
+    - LINEARREG
+    - LINEARREG_ANGLE
+    - LINEARREG_INTERCEPT
+    - LINEARREG_SLOPE
+    - STDDEV
+    - BBANDS_upperband
+    - BBANDS_middleband
+    - BBANDS_lowerband
+    - DEMA
+    - EMA
+    - HT_TRENDLINE
+    - KAMA
+    - MA
+    - MIDPOINT
+    - T3
+    - TEMA
+    - TRIMA
+    - WMA
+
+model_params:
+  hyper_parameters:
+    max_depth: 7
+    n_estimators: 30
+    random_state: 555
+    n_jobs: -1
+
+report_params:
+  n_p_mean: 5

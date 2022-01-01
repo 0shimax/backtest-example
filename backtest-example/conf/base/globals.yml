@@ -1,0 +1,5 @@
+datasets:
+  csv: "pandas.CSVDataSet"
+  pickle: "pickle.PickleDataSet"
+  json: "json.JSONDataSet"
+  image: "backtest_example.extras.datasets.image.image_dataset.ImageDataSet"
